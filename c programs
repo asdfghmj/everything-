@@ -1,0 +1,577 @@
+// Student data
+int studentID = 15;
+int studentAge = 23;
+float studentFee = 75.25;
+char studentGrade = 'B';
+
+// Print variables
+printf("Student id: %d\n", studentID);
+printf("Student age: %d\n", studentAge);
+printf("Student fee: %f\n", studentFee);
+printf("Student grade: %c", studentGrade);
+
+// Create integer variables
+int length = 4;
+int width = 6;
+int area;
+
+// Calculate the area of a rectangle
+area = length * width;
+
+// Print the variables
+printf("Length is: %d\n", length);
+printf("Width is: %d\n", width);
+printf("Area of the rectangle is: %d", area);
+
+// Create variables of different data types
+int items = 50;
+float cost_per_item = 9.99;
+float total_cost = items * cost_per_item;
+char currency = '$';
+
+// Print variables
+printf("Number of items: %d\n", items);
+printf("Cost per item: %.2f %c\n", cost_per_item, currency);
+printf("Total cost = %.2f %c\n", total_cost, currency);
+
+// Set the maximum possible score in the game to 500
+int maxScore = 500;
+
+// The actual score of the user
+int userScore = 423;
+
+// Calculate the percantage of the user's score in relation to the maximum available score
+float percentage = (float) userScore / maxScore * 100.0;
+
+// Print the percentage
+printf("User's percentage is %.2f", percentage);
+
+int myAge = 25;
+int votingAge = 18;
+
+printf("%d", myAge >= votingAge); // Returns 1 (true), meaning 25 year olds are allowed to vote!
+
+int myAge = 25;
+int votingAge = 18;
+
+if (myAge >= votingAge) {
+  printf("Old enough to vote!");
+} else {
+  printf("Not old enough to vote.");
+}
+
+int time = 20;
+if (time < 18) {
+  printf("Good day.");
+} else {
+  printf("Good evening.");
+}
+
+int doorCode = 1337;
+
+if (doorCode == 1337) {
+  printf("Correct code.\nThe door is now open.");
+} else {
+  printf("Wrong code.\nThe door remains closed.");
+}
+
+int myNum = 10;
+
+if (myNum > 0) {
+  printf("The value is a positive number.");
+} else if (myNum < 0) {
+  printf("The value is a negative number.");
+} else {
+  printf("The value is 0.");
+}
+
+int myAge = 25;
+int votingAge = 18;
+
+if (myAge >= votingAge) {
+  printf("Old enough to vote!");
+} else {
+  printf("Not old enough to vote.");
+}
+
+int myNum = 5;
+
+if (myNum % 2 == 0) {
+  printf("%d is even.\n", myNum);
+} else {
+  printf("%d is odd.\n", myNum);
+}
+
+int day = 4;
+
+switch (day) {
+  case 1:
+    printf("Monday");
+    break;
+  case 2:
+    printf("Tuesday");
+    break;
+  case 3:
+    printf("Wednesday");
+    break;
+  case 4:
+    printf("Thursday");
+    break;
+  case 5:
+    printf("Friday");
+    break;
+  case 6:
+    printf("Saturday");
+    break;
+  case 7:
+    printf("Sunday");
+    break;
+}
+
+
+int countdown = 3;
+
+while (countdown > 0) {
+  printf("%d\n", countdown);
+  countdown--;
+}
+
+printf("Happy New Year!!\n");
+
+int dice = 1;
+
+while (dice <= 6) {
+  if (dice < 6) {
+    printf("No Yatzy\n");
+  } else {
+    printf("Yatzy!\n");
+  }
+  dice = dice + 1;
+}
+
+// A variable with some specific numbers
+int numbers = 12345;
+
+// A variable to store the reversed number
+int revNumbers = 0;
+
+// Reverse and reorder the numbers
+while (numbers) {
+  // Get the last number of 'numbers' and add it to 'revNumber'
+  revNumbers = revNumbers * 10 + numbers % 10;
+  // Remove the last number of 'numbers'
+  numbers /= 10;
+}
+
+int i;
+
+for (i = 0; i <= 10; i = i + 2) {
+  printf("%d\n", i);
+}
+
+for (i = 0; i <= 100; i += 10) {
+  printf("%d\n", i);
+}
+
+for (i = 2; i <= 512; i *= 2) {
+  printf("%d\n", i);
+}
+
+int number = 2;
+int i;
+
+// Print the multiplication table for the number 2
+for (i = 1; i <= 10; i++) {
+  printf("%d x %d = %d\n", number, i, number * i);
+}
+
+return 0;
+
+// An array storing different ages
+int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
+
+float avg, sum = 0;
+int i;
+
+// Get the length of the array
+int length = sizeof(ages) / sizeof(ages[0]);
+
+// Loop through the elements of the array
+for (int i = 0; i < length; i++) {
+  sum += ages[i];
+}
+
+// Calculate the average by dividing the sum by the length
+avg = sum / length;
+
+// Print the average
+printf("The average age is: %.2f", avg);
+
+// An array storing different ages
+int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
+
+// Get the length of the array
+int length = sizeof(ages) / sizeof(ages[0]);
+
+// Create a variable and assign the first array element of ages to it
+int lowestAge = ages[0];
+
+// Loop through the elements of the ages array to find the lowest age
+for (int i = 0; i < length; i++) {
+  if (lowestAge > ages[i]) {
+    lowestAge = ages[i];
+  }
+}
+
+char message[] = "Good to see you,";
+char fname[] = "John";
+
+printf("%s %s!", message, fname);.
+
+char word[] = "Computer";
+printf("The word '%s' has %d characters in it.", word, strlen(word));
+
+char fullName[30];
+
+printf("Type your full name: \n");
+fgets(fullName, sizeof(fullName), stdin);
+
+printf("Hello %s", fullName);
+
+// Function to convert Fahrenheit to Celsius
+float toCelsius(float fahrenheit) {
+  return (5.0 / 9.0) * (fahrenheit - 32.0);
+}
+
+int main() {
+  // Set a fahrenheit value
+  float f_value = 98.8;
+
+  // Call the function with the fahrenheit value
+  float result = toCelsius(f_value);
+
+  // Print the fahrenheit value
+  printf("Fahrenheit: %.2f\n", f_value);
+
+  // Print the result
+  printf("Convert Fahrenheit to Celsius: %.2f\n", result);
+
+  return 0;
+}
+
+struct Car {
+  char brand[50];
+  char model[50];
+  int year;
+};
+
+int main() {
+  struct Car car1 = {"BMW", "X5", 1999};
+  struct Car car2 = {"Ford", "Mustang", 1969};
+  struct Car car3 = {"Toyota", "Corolla", 2011};
+
+  printf("%s %s %d\n", car1.brand, car1.model, car1.year);
+  printf("%s %s %d\n", car2.brand, car2.model, car2.year);
+  printf("%s %s %d\n", car3.brand, car3.model, car3.year);
+
+  return 0;
+}
+
+struct list {
+  int *data; // Points to the memory where the list items are stored
+  int numItems; // Indicates how many items are currently in the list
+  int size; // Indicates how many items fit in the allocated memory
+};
+
+void addToList(struct list *myList, int item);
+
+int main() {
+  struct list myList;
+  int amount;
+
+  // Create a list and start with enough space for 10 items
+  myList.numItems = 0;
+  myList.size = 10;
+  myList.data = malloc(myList.size * sizeof(int));
+
+  // Find out if memory allocation was successful
+  if (myList.data == NULL) {
+    printf("Memory allocation failed");
+    return 1; // Exit the program with an error code
+  }
+
+  // Add any number of items to the list specified by the amount variable
+  amount = 44;
+  for (int i = 0; i < amount; i++) {
+    addToList(&myList, i + 1);
+  }
+
+  // Display the contents of the list
+  for (int j = 0; j < myList.numItems; j++) {
+    printf("%d ", myList.data[j]);
+  }
+
+  // Free the memory when it is no longer needed
+  free(myList.data);
+  myList.data = NULL;
+
+  return 0;
+}
+
+// This function adds an item to a list
+void addToList(struct list *myList, int item) {
+
+  // If the list is full then resize the memory to fit 10 more items
+  if (myList->numItems == myList->size) {
+    myList->size += 10;
+    myList->data = realloc( myList->data, myList->size * sizeof(int) );
+  }
+
+  // Add the item to the end of the list
+  myList->data[myList->numItems] = item;
+  myList->numItems++;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+  srand(time(NULL));
+
+  int dice1 = (rand() % 6) + 1;
+  int dice2 = (rand() % 6) + 1;
+  printf("You rolled %d and %d (total = %d)\n", dice1, dice2, dice1 + dice2);
+
+  return 0;
+}
+
+prev2 = 0
+prev1 = 1
+
+print(prev2)
+print(prev1)
+for fibo in range(18):
+    newFibo = prev1 + prev2
+    print(newFibo)
+    prev2 = prev1
+    prev1 = newFibo
+
+
+print(0)
+print(1)
+count = 2
+
+def fibonacci(prev1, prev2):
+    global count
+    if count <= 19:
+        newFibo = prev1 + prev2
+        print(newFibo)
+        prev2 = prev1
+        prev1 = newFibo
+        count += 1
+        fibonacci(prev1, prev2)
+    else:
+        return
+
+fibonacci(1,0)
+
+def F(n):
+    if n <= 1:
+        return n
+    else:
+        return F(n - 1) + F(n - 2)
+
+print(F(19))
+
+  my_array = [7, 12, 9, 4, 11]
+minVal = my_array[0]    # Step 1
+
+for i in my_array:      # Step 2
+    if i < minVal:      # Step 3
+        minVal = i
+        
+print('Lowest value: ',minVal) # Step 4
+
+  my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(my_array)
+for i in range(n-1):
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+
+print("Sorted array:", my_array)
+
+ my_array = [7, 3, 9, 12, 11]
+
+n = len(my_array)
+for i in range(n-1):
+    swapped = False
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+            swapped = True
+    if not swapped:
+        break
+
+print("Sorted array:", my_array)
+
+my_array = [64, 34, 25, 5, 22, 11, 90, 12]
+
+n = len(my_array)
+for i in range(n-1):
+    min_index = i
+    for j in range(i+1, n):
+        if my_array[j] < my_array[min_index]:
+            min_index = j
+    min_value = my_array.pop(min_index)
+    my_array.insert(i, min_value)
+
+print("Sorted array:", my_array)
+
+  my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(my_array)
+for i in range(n):
+    min_index = i
+    for j in range(i+1, n):
+        if my_array[j] < my_array[min_index]:
+            min_index = j   
+    my_array[i], my_array[min_index] = my_array[min_index], my_array[i]
+
+print("Sorted array:", my_array)
+
+my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(my_array)
+for i in range(1,n):
+    insert_index = i
+    current_value = my_array.pop(i)
+    for j in range(i-1, -1, -1):
+        if my_array[j] > current_value:
+            insert_index = j
+    my_array.insert(insert_index, current_value)
+
+print("Sorted array:", my_array)
+
+  my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+
+n = len(my_array)
+for i in range(1,n):
+    insert_index = i
+    current_value = my_array[i]
+    for j in range(i-1, -1, -1):
+        if my_array[j] > current_value:
+            my_array[j+1] = my_array[j]
+            insert_index = j
+        else:
+            break
+    my_array[insert_index] = current_value
+
+print("Sorted array:", my_array)
+
+  def partition(array, low, high):
+    pivot = array[high]
+    i = low - 1
+
+    for j in range(low, high):
+        if array[j] <= pivot:
+            i += 1
+            array[i], array[j] = array[j], array[i]
+
+    array[i+1], array[high] = array[high], array[i+1]
+    return i+1
+
+def quicksort(array, low=0, high=None):
+    if high is None:
+        high = len(array) - 1
+
+    if low < high:
+        pivot_index = partition(array, low, high)
+        quicksort(array, low, pivot_index-1)
+        quicksort(array, pivot_index+1, high)
+
+my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+quicksort(my_array)
+print("Sorted array:", my_array)
+
+
+def countingSort(arr):
+    if not arr:
+        return arr
+        
+    max_val = max(arr)
+    count = [0] * (max_val + 1)
+
+    for num in arr:
+        count[num] += 1
+        
+    arr[:] = []
+
+    for num, freq in enumerate(count):
+        arr.extend([num] * freq)
+
+    return arr
+
+unsortedArr = [4, 2, 2, 6, 3, 3, 1, 6, 5, 2, 3]
+sortedArr = countingSort(unsortedArr)
+print("Sorted array:", sortedArr)
+
+  myArray = [170, 45, 75, 90, 802, 24, 2, 66]
+print("Original array:", myArray)
+radixArray = [[], [], [], [], [], [], [], [], [], []]
+maxVal = max(myArray)
+exp = 1
+
+while maxVal // exp > 0:
+
+    while len(myArray) > 0:
+        val = myArray.pop()
+        radixIndex = (val // exp) % 10
+        radixArray[radixIndex].append(val)
+
+    for bucket in radixArray:
+        while len(bucket) > 0:
+            val = bucket.pop()
+            myArray.append(val)
+
+    exp *= 10
+
+print("Sorted array:", myArray)
+
+def bubbleSort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                
+def radixSortWithBubbleSort(arr):
+    max_val = max(arr)
+    exp = 1
+    
+    while max_val // exp > 0:
+        radixArray = [[],[],[],[],[],[],[],[],[],[]]
+        
+        for num in arr:
+            radixIndex = (num // exp) % 10
+            radixArray[radixIndex].append(num)
+        
+        for bucket in radixArray:
+            bubbleSort(bucket)
+        
+        i = 0
+        for bucket in radixArray:
+            for num in bucket:
+                arr[i] = num
+                i += 1
+        
+        exp *= 10
+
+myArray = [170, 45, 75, 90, 802, 24, 2, 66]
+print("Original array:", myArray)
+radixSortWithBubbleSort(myArray)
+print("Sorted array:", myArray)
+
+  
